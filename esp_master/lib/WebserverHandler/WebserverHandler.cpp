@@ -31,7 +31,7 @@ void WebServerHandler::handlerDevice(AsyncWebServerRequest *request) {
         }
 
         _state = stringState == "on" ? true : false;
-        _device = device == "ac" ? 1 : 2;
+        _device = device == "ac" ? 0 : 1;
 
         _espNow.sendData(_state, _device);
         _espNow.setSendingCallback([](const uint8_t *mac, esp_now_send_status_t status) {

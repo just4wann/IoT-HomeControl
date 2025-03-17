@@ -9,6 +9,10 @@
 const char* ssid = "";
 const char* password = "";
 const char* host = "";
+typedef enum {
+  AC,
+  TV
+} device_type;
 
 payload_type receivedPayload;
 
@@ -35,10 +39,10 @@ void setup() {
       return;
     }
     memcpy(&receivedPayload, incomingData, sizeof(receivedPayload));
-    if (receivedPayload.device == 1) {
+    if (receivedPayload.device == AC) {
       ir.irACHandler(receivedPayload.state);
     }
-    if (receivedPayload.device == 2) {
+    if (receivedPayload.device == TV) {
       ir.irTVHandler(receivedPayload.state);
     }
   });
