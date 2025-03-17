@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>IoT Device Control</title>
+    <link rel="stylesheet" href="../css/index.css" />
+  </head>
+  <body>
+    <main class="container">
+      <section class="sub-container">
+        <section class="title-wrap">
+          <h1 class="title">Bed Room</h1>
+        </section>
+
+        <section class="btn-wrap">
+          <div class="text-room">
+            <h4>AC</h4>
+            <span id="badge-ac"></span>
+          </div>
+          <div class="btns">
+            <button id="on" onclick="onDevice('ac')">ON</button>
+            <button id="off" onclick="offDevice('ac')">OFF</button>
+          </div>
+        </section>
+      </section>
+      <section class="sub-container">
+        <section class="title-wrap">
+          <h1 class="title">Living Room</h1>
+        </section>
+
+        <section class="btn-wrap">
+          <div class="text-room">
+            <h4>TV</h4>
+            <span id="badge-tv"></span>
+          </div>
+          <div class="btns">
+            <button id="on" onclick="onDevice('tv')">ON</button>
+            <button id="off" onclick="offDevice('tv')">OFF</button>
+          </div>
+        </section>
+      </section>
+    </main>
+    <script src="js/index.js"></script>
+  </body>
+</html>
